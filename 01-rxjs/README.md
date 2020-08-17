@@ -114,3 +114,12 @@ This is the list of popular operators you should familiarize yourself with:
 - withLatestFrom
 - merge
 
+### Find the memory leak
+
+- In the folder **memory-leak** there is a simple angular application.
+- That application has routing with different screens.
+- In that app there is a memory leak
+- You job is to fix the memory leak.
+- Use developer tools and the memory tab to take a heap snapshot and heap recording
+- this will help you find the memory leak.
+- Use that information to find and fix the memory leaks.
