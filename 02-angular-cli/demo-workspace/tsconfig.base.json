@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@matrix/auth@dev": [
+        "projects/matrix/auth/src/public-api.ts"
+      ],
+      "@matrix/forms": [
+        "dist/matrix/forms/matrix-forms",
+        "dist/matrix/forms"
+      ],
+      "@matrix/test": [
+        "dist/matrix/test/matrix-test",
+        "dist/matrix/test"
+      ],
+      "@matrix/i18n": [
+        "dist/matrix/i18n/matrix-i18n",
+        "dist/matrix/i18n"
+      ]
+    }
+  }
+}

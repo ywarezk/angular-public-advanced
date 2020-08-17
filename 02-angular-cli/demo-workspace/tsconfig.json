@@ -1,0 +1,47 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/hello/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/hello/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/foo/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/foo/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/matrix/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/matrix/auth/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/matrix/forms/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/matrix/forms/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/matrix/test/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/matrix/test/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/matrix/i18n/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/matrix/i18n/tsconfig.spec.json"
+    }
+]
+}
