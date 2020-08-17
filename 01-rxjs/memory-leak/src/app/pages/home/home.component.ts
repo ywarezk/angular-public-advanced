@@ -9,18 +9,20 @@ import { BehaviorSubject } from 'rxjs';
       List of router events
     </h1>
     <ul>
-      <li *ngFor="let item of events$ | async">
+      <li *ngFor="let item of events">
         {{ item }}
       </li>
     </ul>
   `
 })
 export class HomeComponent implements OnInit {
-  events$: BehaviorSubject<string[]>;
+  events: any[] = [];
 
   constructor(private _routerEvents: RouterEventsService) { }
 
   ngOnInit() {
-    this.events$ = this._routerEvents.routerEvents
+    this._routerEvents.routerEvents.subscribe((e) => {
+      this.events.push(e);
+    })
   }
 }

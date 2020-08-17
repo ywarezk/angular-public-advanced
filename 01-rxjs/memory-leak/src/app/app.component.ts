@@ -2,9 +2,23 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent {
-  title = 'memory-leak';
 }
