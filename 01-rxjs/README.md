@@ -3,6 +3,42 @@
 In this lesson we will learn about RXJS library.
 This library is used for creating Observables and is commonly used throughout the angular framework.
 
+```
+// callback hell
+obsr.subscribe(() => {
+	obsr2.subscribe(() => {
+		obsr3.subscribe(() => {
+			
+		})	
+	})
+});
+
+// memory leaks
+
+obsr.subscribe(() => {
+	
+})
+
+obsr2.subscribe(() => {
+	
+})
+```
+
+## classifying our async code
+
+turn it to marble diagram
+- how many pulses?
+- Will it close? 
+- can it error?
+
+## tools to solve async problems
+
+- RXJS
+- Promise
+  - async / await
+- callbacks
+- Events 
+
 ## Lesson Plan
 
 - Marble Diagram

@@ -46,3 +46,9 @@ Some of the ex I will show the solution.
 The ex are very relevant to almost any angular app you will do so it is very important to do all the ex.
 1 Hour won't be enough to complete all the ex. so some will be left for homework ex. 
 
+## NPX
+
+node package executer
+used to execute cli commands
+- search first in node_modules/.bin
+- after search for the library in npm

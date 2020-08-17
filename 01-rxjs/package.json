@@ -1,0 +1,19 @@
+{
+  "name": "01-rxjs",
+  "version": "1.0.0",
+  "description": "In this lesson we will learn about RXJS library. This library is used for creating Observables and is commonly used throughout the angular framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.6.2",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
