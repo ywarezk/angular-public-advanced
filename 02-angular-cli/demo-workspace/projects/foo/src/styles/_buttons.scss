@@ -1,5 +1,16 @@
 
+@mixin btn {
+  .btn1 {
+    color: red;
+  }
+}
 
-button {
-  border-color: red;
+
+
+._btn2 {
+  color: blue;
+}
+
+._btn3 {
+  color: blue;
 }

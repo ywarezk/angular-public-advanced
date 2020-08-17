@@ -1,0 +1,11 @@
+@use "../../../styles/buttons" as button;
+
+@include button.btn;
+
+p {
+  // @extends .btn1;
+  @extend .btn !optional;
+  // .btn {}
+}
+
+// P { }
