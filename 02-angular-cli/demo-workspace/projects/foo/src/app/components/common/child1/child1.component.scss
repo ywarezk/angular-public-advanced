@@ -1,0 +1,21 @@
+// @use "../../../styles/buttons" as button;
+
+// @include button.btn;
+
+p {
+  // @extend .btn !optional;
+  // color: red;
+}
+
+// P { }
+
+
+
+.child1 {
+
+  // .child1 .hello
+  .hello {
+    border: 1px solid blue;
+  }
+
+}
