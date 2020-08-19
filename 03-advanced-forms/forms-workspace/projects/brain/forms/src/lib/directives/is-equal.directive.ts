@@ -2,11 +2,12 @@
 <input
    ngModel
    isEqual="yariv"
+   isId
 />
  */
 
 import { Directive, Input } from '@angular/core';
-import { Validator, AbstractControl, ValidationErrors, NG_VALIDATORS } from '@angular/forms';
+import { Validator, AbstractControl, ValidationErrors, NG_VALIDATORS, AsyncValidator, NG_ASYNC_VALIDATORS } from '@angular/forms';
 import {Validators} from '../validators';
 
  @Directive({

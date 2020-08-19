@@ -38,7 +38,7 @@ export class ReactiveFormComponent implements OnInit {
       // OurValidators.isEqual('Yariv')
       // Validators.email,
       // Validators.pattern(/[0-9]+/)
-    ]),
+    ], []),
     stam: new FormControl()
   });
 
