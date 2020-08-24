@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   template: `
     <!-- <template-demo></template-demo> -->
 
-    <reactive-form></reactive-form>
+    <!-- <reactive-form></reactive-form> -->
+
+    <brain-dynamic-form></brain-dynamic-form>
   `,
   styleUrls: ['./app.component.scss']
 })

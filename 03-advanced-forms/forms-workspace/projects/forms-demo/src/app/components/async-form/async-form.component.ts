@@ -9,7 +9,6 @@ import { FormGroup, FormControl } from '@angular/forms';
     </form>
   `
 })
-
 export class NameComponent implements OnInit {
   asyncForm = new FormGroup({
     username: new FormControl()

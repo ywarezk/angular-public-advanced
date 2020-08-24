@@ -3,12 +3,19 @@
  */
 
 import { Directive, Input } from '@angular/core';
-// import { AsyncValidator, AbstractControl, ValidationErrors } from '@angular/forms';
+import { AsyncValidator, AbstractControl, ValidationErrors, NG_ASYNC_VALIDATORS } from '@angular/forms';
 import { Observable } from 'rxjs';
 // import { AsyncValidators } from '../async-validators';
 
 @Directive({
-  selector: '[isUsernameExist]'
+  selector: '[isUsernameExist]',
+  providers: [
+    {
+      provide: NG_ASYNC_VALIDATORS,
+      multi: true,
+      useExisting: IsUsernameExistDirective
+    }
+  ]
 })
 export class IsUsernameExistDirective {
   @Input('isUsernameExist')

@@ -78,3 +78,24 @@ items: AutocompleteItem[];
 - Create a form containing an array of text input
 - when a button is pressed in the form that a text input will be added.
 
+## EX. Upload
+
+- https://academeez-file-upload.herokuapp.com/api/file
+```
+{
+	file: '23423424-file-stam.jpg'
+}
+```
+- your job is to do perform an upload of a file
+- HttpClient
+
+```
+<input type="file" 
+   placeholder
+   multiple
+   ruslanUpload="https://academeez-file-upload.herokuapp.com/api/file"
+   (progress)="showProgress($event)"
+>
+```
+- @brain/forms
+

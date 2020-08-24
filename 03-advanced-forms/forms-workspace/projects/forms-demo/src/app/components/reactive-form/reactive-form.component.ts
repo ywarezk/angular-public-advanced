@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { Validators as OurValidators } from '@brain/forms';
 
 @Component({
@@ -23,23 +23,32 @@ import { Validators as OurValidators } from '@brain/forms';
         name="myName"
         type="text"
         placeholder="name" />
+
+      <brain-phone-input formControlName="phone">
+      </brain-phone-input>
+
       <button>submit</button>
 
       <p>
         {{ nameForm.controls.myName?.errors | json }}
+      </p>
+
+      <p>
+        {{ nameForm.value | json }}
       </p>
     </form>
   `
 })
 export class ReactiveFormComponent implements OnInit {
   nameForm = new FormGroup({
-    myName: new FormControl('', [
+    myName: new FormControl('', /*{updateOn: 'blur'}*/ [
       Validators.required,
       // OurValidators.isEqual('Yariv')
       // Validators.email,
       // Validators.pattern(/[0-9]+/)
     ], []),
-    stam: new FormControl()
+    stam: new FormControl(),
+    phone: new FormControl()
   });
 
   constructor() { }
