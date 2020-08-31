@@ -38,6 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     //   this.counter++
     // }, 1000);
 
+
     // const plugin = $('.jquery-plugin').autocomplete()
     // plugin.on('something happened', () => {
     //   // this.title = ...
