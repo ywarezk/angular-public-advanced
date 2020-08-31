@@ -30,7 +30,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         },
         Todo: {
 
-        }
+        },
+
+      },
+      pluralNames: {
+        Task: 'task'
       }
     })
   ],

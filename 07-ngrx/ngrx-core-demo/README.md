@@ -1,27 +1,77 @@
-# NgrxCoreDemo
+## Hello world in redux and NGRX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+- SendComponent 
+  - contains a text input in a form
+  - when submit
+- RecieveComponent
+  - gets the message from the Send component
+  
+MessageService
+  - Subject
+  
+```
+`{
+  message: {
+    hello: '....'
+  },
+  user: {
+    firstName: '',
+    lastName: ''
+  },
+  todo: {
+    tasks: [
+      ...
+    ]
+  }
+}
+```
 
-## Development server
+## Store
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+holds all the data - the data is immutable
 
-## Code scaffolding
+-----+-----+------+-----+------->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-----H-----H------H-----H------->
 
-## Build
+## How do i change the data in the store
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+1. messageService.message.next('new data');
 
-## Running unit tests
+2. messageService.message.next('another message');
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. messageService.message.next('present data state');
+```
 
-## Running end-to-end tests
+ngrx redux implementation
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+reducer + flux
 
-## Further help
+[
+  Action1,
+  Action2,
+  Action3,
+  Action4
+] ==> reduce ===> reducer ===> data / state
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- separate the what happened - Action 
+- how the data is changed - Reducer
+
+
+----A------A-----A-----A------A-------->
+    |      |      |     |      |
+S0--S1----S2-----S3----S4-----S5-------->
+
+(state, Action) => new state
+
+## Redux / NGRX
+
+-----------        -----------             ---------
+|  Store  | -----> Components|-----------> Actions |
+-----------        -----------             ----------
+    | |
+    | |
+  Reducer
+
+## 

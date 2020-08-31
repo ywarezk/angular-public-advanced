@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <send></send>
+    <recieve></recieve>
+  `,
 })
 export class AppComponent {
-  title = 'ngrx-core-demo';
 }
