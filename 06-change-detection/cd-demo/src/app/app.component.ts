@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, AfterViewChecked, AfterContentChecked, DoCheck } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterViewChecked, AfterContentChecked, DoCheck, ApplicationRef, NgZone, ComponentRef, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,21 @@ import { Component, OnInit, AfterViewInit, AfterViewChecked, AfterContentChecked
 
     <child></child>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = {msg: 'hello'};
   counter = 0;
+
+  constructor(
+    private applicationRef: ApplicationRef,
+    private ngZone: NgZone,
+    changeDetectorRef: ChangeDetectorRef // when to trigger cd for AppComponent
+    // applicationRef.tick() ---> ChangeDetectorRef the component is dirty
+    // on push component will be dirty in certain condition
+  ) {
+
+  }
 
   log() {
     console.log('CD: AppComponent');
@@ -26,6 +37,30 @@ export class AppComponent implements OnInit, AfterViewInit {
     // setInterval(() => {
     //   this.counter++
     // }, 1000);
+
+    // const plugin = $('.jquery-plugin').autocomplete()
+    // plugin.on('something happened', () => {
+    //   // this.title = ...
+    //   // this.ngZone.run(() => {
+    //   //   this.title = '...'
+    //   // })
+
+    //   // this.applicationRef.tick()
+    // })
+
+    // this.ngZone.runOutsideAngular(() => {
+    //   // subscribe to websocket that emits often
+    //   // this.http.get
+
+
+    // })
+
+    // // plugin.on('something happened', () => {
+    // //   // this.title = ...
+    // //   this.ngZone.run(() => {
+    // //     this.title = '...'
+    // //   })
+    // // })
   }
 
   randomNum(): number {
@@ -44,5 +79,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 }
 
 // setTimeout(() => {
+  // change detection did not run when setTimeout was outside the component
 //   console.log('timer is now running');
 // }, 1000);

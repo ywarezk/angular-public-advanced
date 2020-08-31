@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ChildComponent } from './components/child.component';
+import { GrandComponent } from './components/grand.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    GrandComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // Router
+    RouterModule.forRoot([], {})
   ],
   providers: [],
   bootstrap: [AppComponent]

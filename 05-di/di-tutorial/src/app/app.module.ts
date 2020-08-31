@@ -14,7 +14,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     // StamModule.forRoot('https://orel-the-jadai.com...')
     // AppRoutingModule,
     HttpClientModule // -----> HttpClient
-    // StamModule
+    // StamModule.forRoot('https://....')
     // ShareModule,
     // RuslanModule.forRoot()
   ],

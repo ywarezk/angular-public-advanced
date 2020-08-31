@@ -34,7 +34,7 @@ export class StamModule {
       providers: [
         {
           provide: CONFIG_STAM_SERVICE,
-          useValue: 'https://...'
+          useValue: configUrl
         }
       ]
     }

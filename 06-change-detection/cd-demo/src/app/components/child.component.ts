@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'child',
@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
     <h1>
       Child Component {{log()}}
     </h1>
-  `
+
+    <grand></grand>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildComponent implements OnInit {
   log() {
     console.log('CD: ChildComponent');
+  }
+
+  constructor(private _changeDetectorRef: ChangeDetectorRef) {
+
   }
 
   ngOnInit() {
